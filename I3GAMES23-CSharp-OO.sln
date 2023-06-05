@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Class", "Demo-Class\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Props", "Demo-Props\Demo-Props.csproj", "{6AAFF9EF-8A3F-4140-85F6-A93FCBAF601F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Démos", "Démos", "{09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exo", "Exo", "{F57EC3EB-038A-4896-B345-1C498612FB2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpWars", "CSharpWars\CSharpWars.csproj", "{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,18 @@ Global
 		{6AAFF9EF-8A3F-4140-85F6-A93FCBAF601F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AAFF9EF-8A3F-4140-85F6-A93FCBAF601F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AAFF9EF-8A3F-4140-85F6-A93FCBAF601F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00C9FA16-0E1D-4CB8-AC3D-45A98360BEB0} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
+		{6AAFF9EF-8A3F-4140-85F6-A93FCBAF601F} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
+		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
