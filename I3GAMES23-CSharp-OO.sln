@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo-Index", "Demo-Index\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Operateur", "Demo-Operateur\Demo-Operateur.csproj", "{ED810E9E-2474-4226-80FF-9AE7A3F3B589}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoBonus-Props", "ExoBonus-Props\ExoBonus-Props.csproj", "{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{ED810E9E-2474-4226-80FF-9AE7A3F3B589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED810E9E-2474-4226-80FF-9AE7A3F3B589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED810E9E-2474-4226-80FF-9AE7A3F3B589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{3CB52F2D-D574-45EE-A05B-DAF6BF2F4B7E} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 		{116B4B95-CD2D-407B-97AE-030119FBBB5F} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
 		{ED810E9E-2474-4226-80FF-9AE7A3F3B589} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
+		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
