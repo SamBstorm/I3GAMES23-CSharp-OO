@@ -15,7 +15,7 @@ namespace Demo_Operateur
             _fruits.Add(f);
         }
 
-        public static Panier operator +(Panier left, Panier right) { 
+        public static Panier operator + (Panier left, Panier right) { 
             Panier result = new Panier();
 
             foreach (Fruit f in left._fruits)
@@ -29,6 +29,43 @@ namespace Demo_Operateur
             }
 
             return result;
+        }
+
+        public static Panier operator + (Panier left, Fruit right)
+        {
+            Panier result = new Panier();
+
+            foreach (Fruit f in left._fruits)
+            {
+                result.AddFruit(f);
+            }
+            
+            result.AddFruit(right);
+            return result;
+        }
+        public static Panier operator + (Fruit left, Panier right)
+        {
+            return right + left;
+        }
+
+        public static int operator + (Panier left, int right)
+        {
+            return left._fruits.Count + right;
+        }
+
+        public static int operator + (int left, Panier right)
+        {
+            return right + left;
+        }
+
+        public static bool operator == (Panier left, Panier right)
+        {
+            return left._fruits.Count == right._fruits.Count;
+        }
+
+        public static bool operator != (Panier left, Panier right)
+        {
+            return !(left == right);
         }
     }
 }

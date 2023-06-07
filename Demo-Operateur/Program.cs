@@ -20,6 +20,20 @@
             // p2 contient 2 Oranges et 1 Fraise
 
             Panier resultatRecolte = p1 + p2;
+
+            p1 = p1 + new Fruit() { Nom = "Framboise"};
+            p2 = new Fruit() { Nom = "Citron"} + p2;
+
+            int resultatAnProchain = resultatRecolte + 10;
+
+            if(resultatRecolte == p1 + new Fruit() { Nom = "Orange" })
+            {
+                Console.WriteLine("La récolte : c'est le Panier 1 avec une Orange...");
+            }
+            else
+            {
+                Console.WriteLine("On est loin de finir la récolte.");
+            }
         }
     }
 }
