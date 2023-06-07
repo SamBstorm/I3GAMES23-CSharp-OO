@@ -10,6 +10,7 @@ namespace CSharpWars
             Console.Clear();
             Console.WriteLine("Bienvenu dans CSharp Wars!");
 
+            /* Test Exercice 1
             Soldat valkyrie = new Soldat();
             valkyrie.Nom = "Valkyrie";
             valkyrie.Puissance = 4;
@@ -41,7 +42,44 @@ namespace CSharpWars
                 Soldat temp = attaquant;
                 attaquant = defenseur;
                 defenseur = temp;
+            }*/
+            
+            /* Test Exercice 2 */
+
+            Nation rouge = new Nation();
+            rouge.Nom = "Rouge";
+            rouge.Enroler("Charlie");
+            rouge.Enroler("Delta");
+            rouge.Enroler("Echo");
+
+            Nation bleue = new Nation();
+            bleue.Nom = "Bleue";
+            bleue.Enroler("Alpha");
+            bleue.Enroler("Beta");
+            bleue.Enroler("Omega");
+
+            //Choix aléatoire de l'attaquant
+            int random_result = RNG.Next(2);
+            Soldat attaquant = rouge["Charlie"];
+            Soldat defenseur = bleue["Omega"];
+
+            if (random_result == 1)
+            {
+                attaquant = bleue["Omega"];
+                defenseur = rouge["Charlie"];
             }
+
+            while (attaquant.Vie > 0 && defenseur.Vie > 0)
+            {
+                Console.WriteLine($"{attaquant.Nom} de la nation {attaquant.nation.Nom} attaque!");
+                attaquant.Tirer(defenseur);
+                Console.WriteLine($"Il nous reste {defenseur.NbUnite} soldat{((defenseur.NbUnite > 1) ? "s" : "")} dans le bataillon {defenseur.Nom} de la nation {defenseur.nation.Nom}...");
+                //Inversion
+                Soldat temp = attaquant;
+                attaquant = defenseur;
+                defenseur = temp;
+            }
+            
         }
     }
 }

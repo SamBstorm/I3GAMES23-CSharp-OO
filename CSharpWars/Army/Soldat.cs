@@ -10,6 +10,7 @@ namespace CSharpWars.Army
     {
         #region fields
         private int _vie = 100;
+        public Nation nation;
         #endregion
 
         #region props
@@ -44,6 +45,7 @@ namespace CSharpWars.Army
         public void Tirer(Soldat adversaire)
         {
             if (adversaire is null) return; //Gestion d'exception (indiquer une erreur, un adversaire ne peut être null, voir plus loin)
+            if (adversaire.nation == this.nation) return; //Gestion d'exception
             int degat = Puissance * NbUnite;
             adversaire.SeBlesser(degat);
         }
