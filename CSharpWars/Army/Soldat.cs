@@ -49,6 +49,16 @@ namespace CSharpWars.Army
             int degat = Puissance * NbUnite;
             adversaire.SeBlesser(degat);
         }
+
+        public static Soldat operator + (Soldat left, Soldat right)
+        {
+            if(right.Vie > 0)
+            {
+                left.Vie = left.Vie + right.Vie;
+                right.Vie = 0;
+            }
+            return left;
+        }
         #endregion
     }
 }

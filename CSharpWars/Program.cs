@@ -43,8 +43,8 @@ namespace CSharpWars
                 attaquant = defenseur;
                 defenseur = temp;
             }*/
-            
-            /* Test Exercice 2 */
+
+            /* Test Exercice 2
 
             Nation rouge = new Nation();
             rouge.Nom = "Rouge";
@@ -79,7 +79,34 @@ namespace CSharpWars
                 attaquant = defenseur;
                 defenseur = temp;
             }
-            
+             */
+
+            /* Test Exercice 3*/
+
+            Nation rouge = new Nation();
+            rouge.Nom = "Rouge";
+            rouge.Enroler("Foxtrot");
+            rouge.Enroler("Delta");
+            rouge.Enroler("Echo");
+
+            Soldat s1 = rouge["Foxtrot"];
+            s1.SeBlesser(75);
+            Console.WriteLine($"La troupe {s1.Nom} à {s1.NbUnite} soldats ({s1.Vie}/{s1.VieMax})");
+
+            Soldat s2 = rouge["Delta"];
+            s2.SeBlesser(75);
+            Console.WriteLine($"La troupe {s2.Nom} à {s2.NbUnite} soldats ({s2.Vie}/{s2.VieMax})");
+
+            //rouge.Fusion(s1.Nom, s2.Nom);//On fusionne avec le noms
+            rouge.Fusion("Foxtrot", "Delta");//Ou avec des valeur de type string
+
+            //On vérifie la fusion 
+            s1 = rouge["Foxtrot"];
+            Console.WriteLine($"La troupe {s1.Nom} à {s1.NbUnite} soldats ({s1.Vie}/{s1.VieMax})");
+
+            s2 = rouge["Delta"];
+            //ATTENTION, la troupe Delta n'existe plus donc on obtient une erreur!
+            Console.WriteLine($"La troupe {s2.Nom} à {s2.NbUnite} soldats ({s2.Vie}/{s2.VieMax})");
         }
     }
 }

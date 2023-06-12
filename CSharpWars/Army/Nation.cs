@@ -74,6 +74,27 @@ namespace CSharpWars.Army
             s.nation = this;
             _armee.Add(nom, s);
         }
+
+        public void Fusion(string nomBataillon1, string nomBataillon2)
+        {
+            //Je vérifie que j'ai bien obtenu les noms
+            if (nomBataillon1 is null || nomBataillon2 is null) return; //Gestion d'exception
+
+            //Je vérifie si les noms correspondent à des Soldats
+            if (!_armee.ContainsKey(nomBataillon1)) return;             //Gestion d'exception
+            if (!_armee.ContainsKey(nomBataillon2)) return;             //Gestion d'exception
+
+            //Maintenant que l'on est sûr que les noms correspondent à des Soldats de l'_armee
+            //Je récupère les Soldats à additionner dans des variables
+            Soldat bataillon1 = _armee[nomBataillon1];
+            Soldat bataillon2 = _armee[nomBataillon2];
+
+            //J'utilise l'opérateur + surchargé de mes Soldats
+            bataillon1 = bataillon1 + bataillon2;
+
+            //Je supprime le Soldat avec 0 Vie
+            _armee.Remove(nomBataillon2);
+        }
         #endregion
     }
 }
