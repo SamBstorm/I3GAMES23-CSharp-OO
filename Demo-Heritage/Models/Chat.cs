@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo_Heritage.Models
 {
-    internal class Chat : Animal
+    internal sealed class Chat : Animal
     {
         public int LongueurPoil { get; set; }
         public int LongueurQueue { get; set; }
