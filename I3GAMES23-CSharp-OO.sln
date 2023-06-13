@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Heritage", "Demo-Herit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Virtual", "Demo-Virtual\Demo-Virtual.csproj", "{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoBonus-Tamagochi", "ExoBonus-Tamagochi\ExoBonus-Tamagochi.csproj", "{857AA6F3-8F8F-4172-AF38-A71FE6136470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857AA6F3-8F8F-4172-AF38-A71FE6136470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857AA6F3-8F8F-4172-AF38-A71FE6136470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857AA6F3-8F8F-4172-AF38-A71FE6136470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857AA6F3-8F8F-4172-AF38-A71FE6136470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{3FFD4ED1-4944-4ACE-B778-8D4808DC1C5A} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 		{59F44669-4C4B-459E-B0DA-D16D911B9992} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
 		{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
+		{857AA6F3-8F8F-4172-AF38-A71FE6136470} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
