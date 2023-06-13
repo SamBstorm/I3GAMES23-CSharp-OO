@@ -15,18 +15,13 @@ namespace ExoBonus_Tamagochi
             do
             {
                 Console.Clear();
-                Console.WriteLine($"-={tama.Nom}=-");
-                Console.WriteLine("----------------");
-                Console.WriteLine($"Faim : {tama.Faim}");
-                Console.WriteLine($"Bonheur : {tama.Bonheur}");
-                Console.WriteLine($"Santé : {tama.Sante}");
-                Console.WriteLine("----------------");
-                for (int i = 0; i < 5; i++)
-                {
+                Console.WriteLine(tama);
+                while(tama.Action > 0) { 
                     Console.WriteLine("Que voulez-vous faire :");
                     Console.WriteLine("1. Nourrir");
                     Console.WriteLine("2. Laver");
                     Console.WriteLine("3. Jouer");
+                    if(tama is Chien) Console.WriteLine("4. Promener");
                     int choix = int.Parse(Console.ReadLine());
                     switch (choix)
                     {
@@ -42,12 +37,17 @@ namespace ExoBonus_Tamagochi
                             tama.Jouer();
                             Console.WriteLine("Youpie!Youpie!");
                             break;
-                        default:
-                            i--;
+                        case 4 when tama is Chien tama_chien:
+                            tama_chien.Promener();
+                            Console.WriteLine("*Agite sa queue!*");
                             break;
                     }
                 }
                 tama.Vivre();
+                if (tama.Temps >= 3)
+                {
+                    tama = tama.Evoluer();                    
+                }
             } while (tama.EstVivant);
             Console.WriteLine("GameOver...");
         }

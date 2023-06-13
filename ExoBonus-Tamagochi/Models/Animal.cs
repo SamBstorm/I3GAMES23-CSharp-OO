@@ -18,6 +18,7 @@ namespace ExoBonus_Tamagochi.Models
         private int _compteur = 0;
         private int _action = 5;
         private bool _estVivant = true;
+        //private int _temps = 0;       //Devenu auto-propriété
         #endregion
 
         #region Propriétés
@@ -25,7 +26,7 @@ namespace ExoBonus_Tamagochi.Models
         public int Bonheur
         {
             get { return _bonheur; }
-            private set
+            protected set
             {
                 /* Sans méthodes
                 if (value < 0) _bonheur = 0;
@@ -38,7 +39,7 @@ namespace ExoBonus_Tamagochi.Models
         public int Faim
         {
             get { return _faim; }
-            private set
+            protected set
             {
                 /* Sans méthodes
                 if (value < 0) _faim = 0;
@@ -50,7 +51,7 @@ namespace ExoBonus_Tamagochi.Models
         public int Sante
         {
             get { return _sante; }
-            private set
+            protected set
             {
                 /* Sans méthodes
                 if (value < 0) _sante = 0;
@@ -60,35 +61,45 @@ namespace ExoBonus_Tamagochi.Models
             }
         }
         public bool EstVivant { get { return _estVivant; } }
+        public int Action {
+            get { return _action; }
+            protected set
+            {
+                _action = value;
+                //if(_action==0) Vivre();
+            }
+        }
+
+        public int Temps { get; private set; } = 0;
         #endregion
 
         #region Méthodes
-        public void Manger()
+        public virtual void Manger()
         {
-            if (_action > 0 && _estVivant)
+            if (Action > 0 && _estVivant)
             {
                 Faim += 2;
                 Bonheur += 1;
-                _action--;
+                Action--;
             }
         }
 
         public void Jouer()
         {
-            if (_action > 0 && _estVivant)
+            if (Action > 0 && _estVivant)
             {
                 Bonheur += 3;
-                _action--;
+                Action--;
             }
         }
 
-        public void Nettoyer()
+        public virtual void Nettoyer()
         {
-            if (_action > 0 && _estVivant)
+            if (Action > 0 && _estVivant)
             {
                 Sante += 5;
                 Bonheur += 1;
-                _action--;
+                Action--;
             }
         }
 
@@ -121,7 +132,8 @@ namespace ExoBonus_Tamagochi.Models
             Faim--;
             Bonheur--;
             Sante--;
-            _action = 5;
+            Action = 5;
+            Temps++;
 
         }
         private int CheckStats(int value, int min = 0, int max = 5)
@@ -129,7 +141,32 @@ namespace ExoBonus_Tamagochi.Models
             if (value < min) return min;
             else if (value > max) return max;
             else return value;
-        } 
+        }
+
+        public override string ToString()
+        {
+            return @$"-={Nom}=-
+----------------
+Faim : {Faim}
+Bonheur : {Bonheur}
+Santé : {Sante}
+----------------";
+        }
+
+        public Chien Evoluer()
+        {
+            Chien evolution = new Chien();
+            evolution.Nom = this.Nom;
+            evolution.Sante = this.Sante;
+            evolution.Bonheur = this.Bonheur;
+            evolution.Faim = this.Faim;
+            evolution.Temps = this.Temps;
+            evolution._dateNaissance = this._dateNaissance;
+            evolution._estVivant = this._estVivant;
+            evolution._action = this._action;
+            evolution._compteur = this._compteur;
+            return evolution;
+        }
         #endregion
     }
 }
