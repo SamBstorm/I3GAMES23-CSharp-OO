@@ -44,7 +44,7 @@ namespace ExoBonus_Tamagochi
                     }
                 }
                 tama.Vivre();
-                if (tama.Temps >= 3)
+                if (tama.Temps >= 10 && !(tama is Chien))
                 {
                     tama = tama.Evoluer();                    
                 }
