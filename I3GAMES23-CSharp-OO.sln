@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExoBonus-Tamagochi", "ExoBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoHeritage", "ExoHeritage\ExoHeritage.csproj", "{429F06A2-283B-4AA5-B17C-408005AD84A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoBonusArbre", "ExoBonusArbre\ExoBonusArbre.csproj", "{28C34475-14AD-4C10-98B5-BA4242D5E1FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{429F06A2-283B-4AA5-B17C-408005AD84A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{429F06A2-283B-4AA5-B17C-408005AD84A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{429F06A2-283B-4AA5-B17C-408005AD84A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C34475-14AD-4C10-98B5-BA4242D5E1FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C34475-14AD-4C10-98B5-BA4242D5E1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C34475-14AD-4C10-98B5-BA4242D5E1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C34475-14AD-4C10-98B5-BA4242D5E1FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{5ADF558F-12D1-4E71-AAD2-2B52D92DB46F} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
 		{857AA6F3-8F8F-4172-AF38-A71FE6136470} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 		{429F06A2-283B-4AA5-B17C-408005AD84A6} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
+		{28C34475-14AD-4C10-98B5-BA4242D5E1FF} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
