@@ -81,7 +81,7 @@ namespace CSharpWars
             }
              */
 
-            /* Test Exercice 3*/
+            /* Test Exercice 3
 
             Nation rouge = new Nation();
             rouge.Nom = "Rouge";
@@ -107,6 +107,39 @@ namespace CSharpWars
             s2 = rouge["Delta"];
             //ATTENTION, la troupe Delta n'existe plus donc on obtient une erreur!
             Console.WriteLine($"La troupe {s2.Nom} à {s2.NbUnite} soldats ({s2.Vie}/{s2.VieMax})");
+            */
+
+            /* Exercice 4 & 5 */
+            Nation rouge = new Nation();
+            rouge.Nom = "Rouge";
+            rouge.EnrolerSoldat("Charlie");
+            Bataillon s1 = rouge["Charlie"];
+            rouge.EnrolerTank("Tango");
+            Bataillon t1 = rouge["Tango"];
+
+            Console.WriteLine($"Ma troupe de Soldat compte {s1.NbUnite} unités, avec une puissance de {s1.Puissance} et une défense {s1.Defense}. Se nomme {s1.Nom}.");
+            Console.WriteLine($"Ma troupe de Tank compte {t1.NbUnite} unités, avec une puissance de {t1.Puissance} et une défense {t1.Defense}. Se nomme {t1.Nom}.");
+
+            Nation bleu = new Nation();
+            bleu.Nom = "Bleu";
+            bleu.EnrolerSoldat("Beta");
+            Bataillon s1_bleu = bleu["Beta"];
+            bleu.EnrolerTank("Foxtrot");
+            Bataillon t1_bleu = bleu["Foxtrot"];
+
+            Console.WriteLine($"Ma troupe de Soldat compte {s1_bleu.NbUnite} unités, avec une puissance de {s1_bleu.Puissance} et une défense {s1_bleu.Defense}. Se nomme {s1_bleu.Nom}.");
+            Console.WriteLine($"Ma troupe de Tank compte {t1_bleu.NbUnite} unités, avec une puissance de {t1_bleu.Puissance} et une défense {t1_bleu.Defense}. Se nomme {t1_bleu.Nom}.");
+
+            t1.Tirer(s1_bleu);
+            t1_bleu.Tirer(s1);
+            s1.Tirer(s1_bleu);
+            s1_bleu.Tirer(t1);
+
+            Console.WriteLine($"Ma troupe de Soldat compte {s1.NbUnite} unités, avec une puissance de {s1.Puissance} et une défense {s1.Defense}. Se nomme {s1.Nom}.");
+            Console.WriteLine($"Ma troupe de Tank compte {t1.NbUnite} unités, avec une puissance de {t1.Puissance} et une défense {t1.Defense}. Se nomme {t1.Nom}.");
+            Console.WriteLine($"Ma troupe de Soldat compte {s1_bleu.NbUnite} unités, avec une puissance de {s1_bleu.Puissance} et une défense {s1_bleu.Defense}. Se nomme {s1_bleu.Nom}.");
+            Console.WriteLine($"Ma troupe de Tank compte {t1_bleu.NbUnite} unités, avec une puissance de {t1_bleu.Puissance} et une défense {t1_bleu.Defense}. Se nomme {t1_bleu.Nom}.");
         }
+
     }
 }

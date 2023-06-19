@@ -8,48 +8,55 @@ namespace CSharpWars.Army
 {
     internal class Bataillon
     {
-        /*Notion d'abstraction/constructeur
+        protected int _ratio;
 
-        //private int _vie;
-        //public int Vie
-        //{
-        //    get
-        //    {
-        //        return _vie;
-        //    }
-        //    private set
-        //    {
-        //        if (value < 0) _vie = 0;
-        //        else if (value > VieMax) _vie = VieMax;
-        //        else _vie = value;
-        //    }
-        //}
-        //public int VieMax { get; private set; }
-        //public int NbUnite
-        //{
-        //    get { return this.Vie / 10; }
-        //}*/
+        private int _vie;
+
+        public int Vie
+        {
+            get
+            {
+                return _vie;
+            }
+            protected set
+            {
+                if (value < 0) _vie = 0;
+                else if (value > VieMax) _vie = VieMax;
+                else _vie = value;
+            }
+        }
+        public int VieMax { get { return 100 * _ratio; } }
+
+        public int NbUnite
+        {
+            get { return _vie / (10 * _ratio); }
+        }
 
         public Nation nation;
         public string Nom { get; set; }
         public int Puissance { get; set; }
         public int Defense { get; set; }
 
-        public virtual void SeBlesser(int degat)
+        //Constructeur (défini les valeurs de base de l'object)
+        public Bataillon(int puissance, int defense)
         {
-            int degatReduit = degat - Defense;
-            /*Plus accès à la vie*/
-            //if (degatReduit > 0) this.Vie -= degatReduit;
+            _ratio = 1;
+            Vie = VieMax;
+            Puissance = puissance;
+            Defense = defense;
         }
 
-        /* Paramètre de mauvais type
-        //public void Tirer(Soldat adversaire)
-        //{
-        //    if (adversaire is null) return; //Gestion d'exception (indiquer une erreur, un adversaire ne peut être null, voir plus loin)
-        //    if (adversaire.nation == this.nation) return; //Gestion d'exception
-        //    int degat = Puissance * NbUnite;
-        //    adversaire.SeBlesser(degat);
-        //}
-        */
+        public void SeBlesser(int degat)
+        {
+            int degatReduit = degat - Defense;
+            if (degatReduit > 0) this.Vie -= degatReduit;
+        }
+        public void Tirer(Bataillon adversaire)
+        {
+            if (adversaire is null) return; //gestion d'exception
+            if (adversaire.nation == nation) return; // Gestion d'exception
+            int degat = Puissance * NbUnite;
+            adversaire.SeBlesser(degat);
+        }
     }
 }
