@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharpWars.Army
 {
-    internal class Soldat
+    internal class Soldat : Bataillon
     {
         #region fields
         private int _vie = 100;
-        public Nation nation;
         #endregion
 
         #region props
@@ -26,20 +25,17 @@ namespace CSharpWars.Army
 
         public int VieMax { get; private set; } = 100;
 
-        public string Nom { get; set; }
-        public int Puissance { get; set; }
-        public int Defense { get; set; }
-
         public int NbUnite {
             get { return this.Vie / 10; }
         }
         #endregion
 
         #region methods
-        public void SeBlesser(int degat)
+
+        public override void SeBlesser(int degat)
         {
             int degatReduit = degat - Defense;
-            if(degatReduit > 0) this.Vie -= degatReduit;
+            if( degatReduit > 0 ) Vie -= degatReduit;
         }
 
         public void Tirer(Soldat adversaire)
