@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExoBonusArbre.Models
 {
-    internal abstract class Arbre
+    internal abstract class Arbre : IArbre, IMareche
     {
         protected List<Fruit> _recolte;
         public List<Fruit> Secouer() {

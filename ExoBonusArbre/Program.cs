@@ -19,6 +19,13 @@ namespace ExoBonusArbre
             }
             Console.WriteLine($"Dans mon Pommier il y a {((Pommier)verger[0]).Recolte.Count} pommes!");
             Console.WriteLine($"Dans mon Poirier il y a {((Poirier)verger[1]).Recolte.Count} poires!");
+
+            Pommier pommier = new Pommier();
+            IArbre arbre_1 = pommier;
+            arbre_1.Produire();
+
+            IMareche proprio = pommier;
+            proprio.Secouer();
         }
     }
 }
