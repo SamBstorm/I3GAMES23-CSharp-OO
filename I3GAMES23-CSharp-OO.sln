@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Constructeur", "Demo-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Dispose", "Demo-Dispose\Demo-Dispose.csproj", "{0B3E2ABB-EF94-481F-8DC8-55034DA748A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoBonus-Monopoly", "ExoBonus-Monopoly\ExoBonus-Monopoly.csproj", "{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,10 @@ Global
 		{0B3E2ABB-EF94-481F-8DC8-55034DA748A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B3E2ABB-EF94-481F-8DC8-55034DA748A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B3E2ABB-EF94-481F-8DC8-55034DA748A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{2A06B04E-0ACD-46E0-9311-5AF503319B0B} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 		{5D529990-BBEB-4953-9C2C-F8BF5F5F7A10} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
 		{0B3E2ABB-EF94-481F-8DC8-55034DA748A8} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
+		{9C8DEE06-CE73-442B-BEAC-DA73C20AED6A} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
