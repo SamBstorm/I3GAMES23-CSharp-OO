@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Static", "Demo-Static\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo-Static", "Exo-Static\Exo-Static.csproj", "{F41716DE-3C37-4E73-940E-B9BA2EFA0AFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo-AmongUs", "Exo-AmongUs\Exo-AmongUs.csproj", "{2A06B04E-0ACD-46E0-9311-5AF503319B0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{F41716DE-3C37-4E73-940E-B9BA2EFA0AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41716DE-3C37-4E73-940E-B9BA2EFA0AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41716DE-3C37-4E73-940E-B9BA2EFA0AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A06B04E-0ACD-46E0-9311-5AF503319B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A06B04E-0ACD-46E0-9311-5AF503319B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A06B04E-0ACD-46E0-9311-5AF503319B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A06B04E-0ACD-46E0-9311-5AF503319B0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{28C34475-14AD-4C10-98B5-BA4242D5E1FF} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 		{D56013AC-9477-4B0A-93BC-281FD42659BC} = {09125B7B-8DB4-4BB1-B339-E6EDA2AB3232}
 		{F41716DE-3C37-4E73-940E-B9BA2EFA0AFF} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
+		{2A06B04E-0ACD-46E0-9311-5AF503319B0B} = {F57EC3EB-038A-4896-B345-1C498612FB2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25CD5571-FB92-4482-AB7E-CC44021AE162}
