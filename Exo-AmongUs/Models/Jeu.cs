@@ -44,6 +44,10 @@ namespace Exo_AmongUs.Models
             else LogEvent($"Féliciation!\n{_killer.Name} était bien le tueur!");
         }
 
+        /// <summary>
+        /// LogEvent est une fonction permettant l'affichage en console d'un message, et se termine lorsque l'on appuie sur 'Enter'
+        /// </summary>
+        /// <param name="message">Correspond au message affiché en console</param>
         private static void LogEvent(string message)
         {
             Console.Clear();
@@ -51,6 +55,11 @@ namespace Exo_AmongUs.Models
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Permet d'afficher la liste des potentiels victimes du Tueur.
+        /// Et retourne un IJoueur correspondant.
+        /// </summary>
+        /// <returns>IJoueur de notre victime.</returns>
         private static IJoueur ChooseVictim()
         {
             IJoueur choosen;
@@ -141,6 +150,12 @@ namespace Exo_AmongUs.Models
                 if (player.Name == choosenOne) return player;
             }
             return null;
+
+            /* Tout le code peut être remplacé par des fonctions LinQ
+             * 
+            string name = votes.FirstOrDefault(kvp => kvp.Value == votes.Values.Max()).Key;
+            return _players.SingleOrDefault(p => p.Name == name);
+            */
         }
 
         private static int ConsoleReadInt(string message, int min = 0, int max = 20)
