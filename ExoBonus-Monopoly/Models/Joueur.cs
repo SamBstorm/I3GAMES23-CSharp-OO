@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExoBonus_Monopoly.Models.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,9 @@ namespace ExoBonus_Monopoly.Models
 
         public void Payer(int somme)
         {
-            if(somme <= 0) return; //Gestion Exception
-            if(Solde >= somme) Solde -= somme;
+            if (somme <= 0) return;
+            if(Solde < somme) throw new NotEnoughMoneyException();
+            Solde -= somme;
         }
         public void DevenirProprio(CasePropriete propriete) {
             if (propriete.Proprietaire != this) return;

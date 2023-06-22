@@ -1,4 +1,6 @@
-﻿namespace ExoBonus_Monopoly.Models
+﻿using ExoBonus_Monopoly.Models.Exceptions;
+
+namespace ExoBonus_Monopoly.Models
 {
     internal class CasePropriete : Case
     {
@@ -15,10 +17,16 @@
 
         public void AchatPar(Joueur nouveauProprio)
         {
-            if (nouveauProprio.Solde < PrixAchat) return;
-            nouveauProprio.Payer(PrixAchat);
-            Proprietaire = nouveauProprio;
-            Proprietaire.DevenirProprio(this);
+            try
+            {
+                nouveauProprio.Payer(PrixAchat);
+                Proprietaire = nouveauProprio;
+                Proprietaire.DevenirProprio(this);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
